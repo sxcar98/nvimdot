@@ -166,9 +166,9 @@ function config.cmp()
             -- { name = "spell" },
             -- { name = "tmux" },
             -- { name = "orgmode" },
-            { name = "buffer" },
+            -- { name = "buffer" },
             -- { name = "latex_symbols" },
-            { name = "cmp_tabnine" },
+            -- { name = "cmp_tabnine" },
         },
     })
 end
