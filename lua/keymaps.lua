@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 
+-- set space as leader key
 vim.g.mapleader = " "
 
 -- Move around splits
@@ -16,6 +17,7 @@ map("n", "<leader>fb", builtin.buffers, { desc = "Open Telescope to list buffers
 map("n", "<leader>fh", builtin.help_tags, { desc = "Open Telescope to show help" })
 map("n", "<leader>fo", builtin.oldfiles, { desc = "Open Telescope to list recent files" })
 map("n", "<leader>cm", builtin.git_commits, { desc = "Open Telescope to list git commits" })
+
 -- NvimTree
 map("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree sidebar" }) -- open/close
 map("n", "<leader>nr", ":NvimTreeRefresh<CR>", { desc = "Refresh NvimTree" }) -- refresh

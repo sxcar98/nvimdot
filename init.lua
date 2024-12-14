@@ -1,5 +1,3 @@
-vim.opt.termguicolors = true -- enable 24-bit RGB colors
-
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
