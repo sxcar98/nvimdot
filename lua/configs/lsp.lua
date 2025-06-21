@@ -7,6 +7,10 @@ lspconfig.clangd.setup({
   filetypes = { "c", "cpp", "cc", "h", "hpp" },
 })
 
+lspconfig.jsonls.setup({
+  capabilities = capabilities,
+})
+
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
   on_init = function(client)
@@ -33,6 +37,6 @@ lspconfig.lua_ls.setup({
   },
 })
 
-require("lspconfig").pyright.setup({
+lspconfig.pyright.setup({
   capabilities = capabilities,
 })

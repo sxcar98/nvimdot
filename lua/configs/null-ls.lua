@@ -3,6 +3,9 @@ local bltns = null_ls.builtins
 
 local sources = {
 	bltns.formatting.stylua,
+	bltns.formatting.prettier,
+	bltns.formatting.black,
+	bltns.formatting.isort,
 	bltns.formatting.clang_format.with({
 		filetypes = { "c", "cpp", "cc", "h", "hpp" },
 	}),
