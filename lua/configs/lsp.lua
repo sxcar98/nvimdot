@@ -11,6 +11,12 @@ lspconfig.jsonls.setup({
   capabilities = capabilities,
 })
 
+lspconfig.rust_analyzer.setup({
+  diagnostics = {
+    enable = false,
+  },
+})
+
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
   on_init = function(client)

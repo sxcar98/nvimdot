@@ -3,6 +3,7 @@ local bltns = null_ls.builtins
 
 local sources = {
 	bltns.formatting.stylua,
+	require("none-ls.formatting.rustfmt"),
 	bltns.formatting.prettier,
 	bltns.formatting.black,
 	bltns.formatting.isort,
