@@ -75,12 +75,18 @@ local plugins = {
 		end,
 	},
 	{
-		"nvimtools/none-ls.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		dependencies = { "nvimtools/none-ls-extras.nvim" },
+		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
 		lazy = false,
 		config = function()
-			require("configs.null-ls")
+			require("configs.conform")
+		end,
+	},
+	{
+		"mfussenegger/nvim-lint",
+		event = { "BufReadPost", "BufWritePost" },
+		config = function()
+			require("configs.nvim-lint")
 		end,
 	},
 }
