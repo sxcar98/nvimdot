@@ -13,12 +13,6 @@ lint.linters_by_ft = {
 	go = { "golangcilint" },
 }
 
-autocmd({ "CursorHold", "CursorHoldI" }, {
-	callback = function()
-		require("lint").try_lint()
-	end,
-})
-
 autocmd({ "BufWritePost" }, {
 	callback = function()
 		require("lint").try_lint()
