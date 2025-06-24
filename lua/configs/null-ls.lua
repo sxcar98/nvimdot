@@ -5,7 +5,7 @@ local sources = {
 	bltns.formatting.stylua,
 	require("none-ls.formatting.rustfmt"),
 	bltns.formatting.prettier,
-	bltns.formatting.black,
+	bltns.formatting.blackd,
 	bltns.formatting.isort,
 	bltns.formatting.clang_format.with({
 		filetypes = { "c", "cpp", "cc", "h", "hpp" },
