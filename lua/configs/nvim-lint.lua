@@ -18,3 +18,9 @@ autocmd({ "CursorHold", "CursorHoldI" }, {
 		require("lint").try_lint()
 	end,
 })
+
+autocmd({ "BufWritePost" }, {
+	callback = function()
+		require("lint").try_lint()
+	end,
+})
