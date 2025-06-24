@@ -9,14 +9,14 @@ map("n", "<C-j>", "<C-w>j", { desc = "switch window right" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 map("n", "<C-l>", "<C-w>l", { desc = "switch window down" })
 
--- Telescope
-local builtin = require("telescope.builtin")
-map("n", "<leader>ff", builtin.find_files, { desc = "Open Telescope to find files" })
-map("n", "<leader>fg", builtin.live_grep, { desc = "Open Telescope to do live grep" })
-map("n", "<leader>fb", builtin.buffers, { desc = "Open Telescope to list buffers" })
-map("n", "<leader>fh", builtin.help_tags, { desc = "Open Telescope to show help" })
-map("n", "<leader>fo", builtin.oldfiles, { desc = "Open Telescope to list recent files" })
-map("n", "<leader>cm", builtin.git_commits, { desc = "Open Telescope to list git commits" })
+-- fzf-lua
+local fzf = require("fzf-lua")
+map("n", "<leader>ff", fzf["files"], { desc = "Open fzf-lua to find files" })
+map("n", "<leader>fg", fzf["live_grep"], { desc = "Open fzf-lua to do live grep" })
+map("n", "<leader>fb", fzf["buffers"], { desc = "Open fzf-lua to list buffers" })
+map("n", "<leader>fh", fzf["help_tags"], { desc = "Open fzf-lua to show help" })
+map("n", "<leader>fo", fzf["oldfiles"], { desc = "Open fzf-lua to list recent files" })
+map("n", "<leader>cm", fzf["git_commits"], { desc = "Open fzf-lua to list git commits" })
 
 -- NvimTree
 map("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree sidebar" }) -- open/close

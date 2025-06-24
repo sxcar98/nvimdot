@@ -41,18 +41,10 @@ local plugins = {
 		opts = require("configs.treesitter"),
 	},
 	{
-		"nvim-telescope/telescope.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
-			{
-				"nvim-telescope/telescope-fzf-native.nvim",
-				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-			},
-		},
-		cmd = "Telescope",
+		"ibhagwan/fzf-lua",
+		event = "VeryLazy",
 		config = function()
-			require("configs.telescope")
+			require("configs.fzf")
 		end,
 	},
 	{
