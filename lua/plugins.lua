@@ -11,10 +11,12 @@ local plugins = {
 		opts = require("configs.auto-dark-mode"),
 	},
 	{
-		"m4xshen/autoclose.nvim",
+		"windwp/nvim-autopairs",
 		lazy = true,
 		event = "InsertEnter",
-		opts = require("configs.autoclose"),
+		config = function()
+			require("configs.autopairs")
+		end,
 	},
 	{ "nvim-lua/plenary.nvim" },
 	{
@@ -61,6 +63,10 @@ local plugins = {
 			"hrsh7th/cmp-nvim-lua",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
+			{
+				"L3MON4D3/LuaSnip",
+				build = "make install_jsregexp",
+			},
 		},
 		opts = function()
 			require("configs.cmp")
@@ -78,7 +84,7 @@ local plugins = {
 		"mfussenegger/nvim-lint",
 		event = { "BufReadPost", "BufWritePost" },
 		config = function()
-			require("configs.nvim-lint")
+			require("configs.lint")
 		end,
 	},
 }
