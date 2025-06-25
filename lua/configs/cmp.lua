@@ -6,13 +6,11 @@ local options = {
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
-
 	mapping = cmp.mapping.preset.insert({
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<S-Space>"] = cmp.mapping.complete(),
 		["<C-e>"] = cmp.mapping.abort(),
-		-- ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
@@ -31,17 +29,7 @@ local options = {
 				fallback()
 			end
 		end, { "i", "s" }),
-		["<CR>"] = cmp.mapping({
-			i = function(fallback)
-				if cmp.visible() and cmp.get_active_entry() then
-					cmp.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = false })
-				else
-					fallback()
-				end
-			end,
-			s = cmp.mapping.confirm({ select = true }),
-			c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true }),
-		}),
+		["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 	}),
 	sources = {
 		{ name = "nvim_lsp" },

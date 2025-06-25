@@ -18,14 +18,34 @@ local plugins = {
 			require("configs.autopairs")
 		end,
 	},
-	{ "nvim-lua/plenary.nvim" },
 	{
-		"nvim-tree/nvim-tree.lua",
+		"nvim-lua/plenary.nvim",
+	},
+	{
+		"MunifTanjim/nui.nvim",
+	},
+	{
+		"nvim-tree/nvim-web-devicons",
+	},
+	{
+		"echasnovski/mini.icons",
+	},
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		lazy = false,
 		opts = require("configs.tree"),
 	},
 	{
 		"nvim-lualine/lualine.nvim",
 		opts = require("configs.lualine"),
+	},
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = require("configs.noice"),
+		dependencies = {
+			"rcarriga/nvim-notify",
+		},
 	},
 	{
 		"folke/which-key.nvim",
@@ -40,7 +60,9 @@ local plugins = {
 		"nvim-treesitter/nvim-treesitter",
 		event = "BufReadPre",
 		build = ":TSUpdate",
-		opts = require("configs.treesitter"),
+		config = function()
+			require("configs.treesitter")
+		end,
 	},
 	{
 		"ibhagwan/fzf-lua",
@@ -68,7 +90,7 @@ local plugins = {
 				build = "make install_jsregexp",
 			},
 		},
-		opts = function()
+		config = function()
 			require("configs.cmp")
 		end,
 	},
@@ -76,9 +98,7 @@ local plugins = {
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },
 		lazy = false,
-		config = function()
-			require("configs.conform")
-		end,
+		opts = require("configs.conform"),
 	},
 	{
 		"mfussenegger/nvim-lint",

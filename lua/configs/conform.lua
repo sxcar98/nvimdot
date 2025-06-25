@@ -1,4 +1,3 @@
-local conform = require("conform")
 local prettier = { "prettierd", "prettier", stop_after_first = true }
 
 local options = {
@@ -24,4 +23,4 @@ local options = {
 	},
 }
 
-conform.setup(options)
+return options

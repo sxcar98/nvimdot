@@ -1,4 +1,5 @@
 local fzf = require("fzf-lua")
+
 local options = {
 	keymap = {
 		builtin = {

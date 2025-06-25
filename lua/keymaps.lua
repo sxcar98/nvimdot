@@ -18,10 +18,8 @@ map("n", "<leader>fh", fzf["help_tags"], { desc = "Open fzf-lua to show help" })
 map("n", "<leader>fo", fzf["oldfiles"], { desc = "Open fzf-lua to list recent files" })
 map("n", "<leader>cm", fzf["git_commits"], { desc = "Open fzf-lua to list git commits" })
 
--- NvimTree
-map("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree sidebar" }) -- open/close
-map("n", "<leader>nr", ":NvimTreeRefresh<CR>", { desc = "Refresh NvimTree" }) -- refresh
-map("n", "<leader>nf", ":NvimTreeFindFile<CR>", { desc = "Search file in NvimTree" }) -- search file
+-- neo-tree
+map("n", "<leader>n", ":Neotree toggle<CR>", { desc = "Toggle neo-tree sidebar" })
 
 -- global lsp mappings
 map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP Diagnostic loclist" })
