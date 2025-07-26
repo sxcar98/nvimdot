@@ -108,6 +108,20 @@ local plugins = {
 			require("configs.lint")
 		end,
 	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
+		ft = { "markdown", "codecompanion" },
+    lazy = true,
+		opts = {},
+	},
+	{
+		"yelog/marklive.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		lazy = true,
+		ft = "markdown",
+		opts = {},
+	},
 }
 
 require("lazy").setup({
