@@ -11,6 +11,8 @@ lint.linters_by_ft = {
 	javascript = { "eslint" },
 	typescript = { "eslint" },
 	go = { "golangcilint" },
+	sql = { "sqruff" },
+	Dbee = { "sqruff" },
 }
 
 autocmd({ "BufWritePost" }, {

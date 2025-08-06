@@ -23,6 +23,7 @@ local options = {
 	},
 	indent = {
 		enable = true,
+		disable = { "sql" },
 	},
 	autotag = {
 		enable = true,
