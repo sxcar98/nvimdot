@@ -33,7 +33,9 @@ local plugins = {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		lazy = false,
-		opts = require("configs.tree"),
+		configs = function()
+			require("configs.tree")
+		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",

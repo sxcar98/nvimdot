@@ -1,3 +1,5 @@
+local tree = require("neo-tree")
+
 local options = {
 	window = {
 		mappings = {
@@ -13,4 +15,4 @@ local options = {
 	},
 }
 
-return options
+tree.setup(options)
