@@ -1,21 +1,5 @@
-local treesitter = require("nvim-treesitter.configs")
+local treesitter = require("nvim-treesitter")
 local options = {
-	-- A list of parser names, or "all"
-	ensure_installed = {
-		"c",
-		"cpp",
-		"python",
-		"json",
-		"yaml",
-		"markdown",
-		"html",
-		"scss",
-		"css",
-		"vim",
-		"lua",
-		"bash",
-		"regex",
-	},
 	auto_install = true,
 	highlight = {
 		enable = true,
@@ -41,5 +25,20 @@ local options = {
 		},
 	},
 }
+
+treesitter.install({
+	"c",
+	"cpp",
+	"python",
+	"json",
+	"yaml",
+	"markdown",
+	"html",
+	"scss",
+	"css",
+	"vim",
+	"lua",
+	"bash",
+})
 
 treesitter.setup(options)
