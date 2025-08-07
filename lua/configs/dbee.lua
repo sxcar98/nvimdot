@@ -1,7 +1,7 @@
 local dbee = require("dbee")
 
 local options = {
-	default_connection = "ITHeimaAI",
+	default_connection = "MacminiMySQLDB",
 	sources = {
 		require("dbee.sources").MemorySource:new({
 			{

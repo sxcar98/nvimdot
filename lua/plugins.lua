@@ -105,7 +105,9 @@ local plugins = {
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },
 		lazy = false,
-		opts = require("configs.conform"),
+		config = function()
+			require("configs.conform")
+		end,
 	},
 	{
 		"mfussenegger/nvim-lint",
@@ -127,6 +129,11 @@ local plugins = {
 		lazy = true,
 		ft = "markdown",
 		opts = {},
+	},
+	{
+		"nanotee/sqls.nvim",
+		lazy = true,
+		ft = { "Dbee", "sql" },
 	},
 	{
 		"kndndrj/nvim-dbee",

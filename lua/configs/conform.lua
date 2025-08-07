@@ -1,4 +1,9 @@
+local conform = require("conform")
+
 local prettier = { "prettierd", "prettier", stop_after_first = true }
+conform.formatters.sql_formatter = {
+	prepend_args = { "-l", "mysql" },
+}
 
 local options = {
 	default_format_opts = {
@@ -7,10 +12,10 @@ local options = {
 	formatters_by_ft = {
 		c = { "clang-format" },
 		cpp = { "clang-format" },
-		css = { "prettier" },
-		html = { "prettier" },
-		javascript = { "prettier" },
-		json = { "prettier" },
+		css = prettier,
+		html = prettier,
+		javascript = prettier,
+		json = prettier,
 		lua = { "stylua" },
 		python = { "isort", "black" },
 		typescript = { "stylua" },
@@ -20,9 +25,8 @@ local options = {
 		Dbee = { "sql_formatter" },
 	},
 	format_on_save = {
-		-- These options will be passed to conform.format()
 		timeout_ms = 500,
 	},
 }
 
-return options
+conform.setup(options)

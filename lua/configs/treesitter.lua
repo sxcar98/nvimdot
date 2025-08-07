@@ -7,7 +7,6 @@ local options = {
 	},
 	indent = {
 		enable = true,
-		disable = { "sql" },
 	},
 	autotag = {
 		enable = true,
@@ -39,6 +38,7 @@ treesitter.install({
 	"vim",
 	"lua",
 	"bash",
+	"sql",
 })
 
 treesitter.setup(options)
