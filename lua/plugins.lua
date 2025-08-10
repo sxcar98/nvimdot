@@ -74,33 +74,13 @@ local plugins = {
 		end,
 	},
 	{
-		"neovim/nvim-lspconfig",
-		lazy = false,
-		config = function()
-			require("configs.lsp")
-		end,
-	},
-	{
-		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
+		"saghen/blink.cmp",
 		dependencies = {
-			"hrsh7th/cmp-nvim-lua",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-buffer",
-			{
-				"L3MON4D3/LuaSnip",
-				build = "make install_jsregexp",
-				dependencies = {
-					"rafamadriz/friendly-snippets",
-				},
-				config = function()
-					require("configs.luasnip")
-				end,
-			},
+			{ "rafamadriz/friendly-snippets" },
 		},
+		build = "cargo build --release",
 		config = function()
-			require("configs.cmp")
+			require("configs.blink")
 		end,
 	},
 	{
@@ -135,7 +115,7 @@ local plugins = {
 	{
 		"nanotee/sqls.nvim",
 		lazy = true,
-		ft = { "Dbee", "sql" },
+		ft = { "Dbee", "sql", "mysql" },
 	},
 	{
 		"kndndrj/nvim-dbee",

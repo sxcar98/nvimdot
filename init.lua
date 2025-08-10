@@ -21,6 +21,7 @@ for _, source in ipairs({
 	"options",
 	"keymaps",
 	"autocmds",
+	"lsp",
 }) do
 	local ok, fault = pcall(require, source)
 	if not ok then
