@@ -19,9 +19,6 @@ local plugins = {
 		end,
 	},
 	{
-		"nvim-lua/plenary.nvim",
-	},
-	{
 		"MunifTanjim/nui.nvim",
 	},
 	{
@@ -29,13 +26,6 @@ local plugins = {
 	},
 	{
 		"echasnovski/mini.icons",
-	},
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		lazy = false,
-		configs = function()
-			require("configs.tree")
-		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
