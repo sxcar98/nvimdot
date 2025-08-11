@@ -93,7 +93,6 @@ local plugins = {
 	},
 	{
 		"mfussenegger/nvim-lint",
-		event = { "BufReadPost", "BufWritePost" },
 		config = function()
 			require("configs.lint")
 		end,
