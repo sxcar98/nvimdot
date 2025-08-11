@@ -59,14 +59,6 @@ local plugins = {
 		opts = require("configs.gitsigns"),
 	},
 	{
-		"nvim-treesitter/nvim-treesitter",
-		branch = "main",
-		build = ":TSUpdate",
-		config = function()
-			require("configs.treesitter")
-		end,
-	},
-	{
 		"ibhagwan/fzf-lua",
 		event = "VeryLazy",
 		config = function()
@@ -99,22 +91,20 @@ local plugins = {
 	},
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
-		ft = { "markdown", "codecompanion" },
+		ft = {
+			"markdown",
+			"codecompanion",
+		},
 		lazy = true,
-		opts = {},
-	},
-	{
-		"yelog/marklive.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		lazy = true,
-		ft = "markdown",
-		opts = {},
 	},
 	{
 		"nanotee/sqls.nvim",
 		lazy = true,
-		ft = { "Dbee", "sql", "mysql" },
+		ft = {
+			"Dbee",
+			"sql",
+			"mysql",
+		},
 	},
 	{
 		"kndndrj/nvim-dbee",
