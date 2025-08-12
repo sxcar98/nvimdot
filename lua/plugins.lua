@@ -14,9 +14,7 @@ local plugins = {
 		"windwp/nvim-autopairs",
 		lazy = true,
 		event = "InsertEnter",
-		config = function()
-			require("configs.autopairs")
-		end,
+		opts = require("configs.autopairs"),
 	},
 	{
 		"MunifTanjim/nui.nvim",
@@ -32,14 +30,6 @@ local plugins = {
 		opts = require("configs.lualine"),
 	},
 	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = require("configs.noice"),
-		dependencies = {
-			"rcarriga/nvim-notify",
-		},
-	},
-	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 	},
@@ -51,9 +41,7 @@ local plugins = {
 	{
 		"ibhagwan/fzf-lua",
 		event = "VeryLazy",
-		config = function()
-			require("configs.fzf")
-		end,
+		opts = require("configs.fzf"),
 	},
 	{
 		"saghen/blink.cmp",
@@ -61,9 +49,7 @@ local plugins = {
 			{ "rafamadriz/friendly-snippets" },
 		},
 		build = "cargo build --release",
-		config = function()
-			require("configs.blink")
-		end,
+		opts = require("configs.blink"),
 	},
 	{
 		"stevearc/conform.nvim",
@@ -98,9 +84,6 @@ local plugins = {
 	},
 	{
 		"kndndrj/nvim-dbee",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-		},
 		build = function()
 			require("dbee").install()
 		end,

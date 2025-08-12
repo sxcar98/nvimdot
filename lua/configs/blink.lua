@@ -1,5 +1,3 @@
-local blink = require("blink.cmp")
-
 local options = {
 	completion = {
 		documentation = {
@@ -38,4 +36,4 @@ local options = {
 	},
 }
 
-blink.setup(options)
+return options

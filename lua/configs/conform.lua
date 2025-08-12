@@ -1,8 +1,16 @@
 local conform = require("conform")
 
-local prettier = { "prettierd", "prettier", stop_after_first = true }
+local prettier = {
+	"prettierd",
+	"prettier",
+	stop_after_first = true,
+}
+
 conform.formatters.sql_formatter = {
-	prepend_args = { "-l", "mysql" },
+	prepend_args = {
+		"-l",
+		"mysql",
+	},
 }
 
 local options = {

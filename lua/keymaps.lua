@@ -18,11 +18,17 @@ map("n", "<leader>fh", fzf["help_tags"], { desc = "Open fzf-lua to show help" })
 map("n", "<leader>fo", fzf["oldfiles"], { desc = "Open fzf-lua to list recent files" })
 map("n", "<leader>cm", fzf["git_commits"], { desc = "Open fzf-lua to list git commits" })
 
--- neo-tree
-map("n", "<leader>n", ":Neotree toggle<CR>", { desc = "Toggle neo-tree sidebar" })
-
 -- global lsp mappings
 map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP Diagnostic loclist" })
+map("n", "gd", vim.lsp.buf.definition, opts)
+map("n", "K", vim.lsp.buf.hover, opts)
+map("n", "gi", vim.lsp.buf.implementation, opts)
+map("n", "<leader>rn", vim.lsp.buf.rename, opts)
+map("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+map("n", "gr", vim.lsp.buf.references, opts)
+map("n", "[d", vim.diagnostic.goto_prev, opts)
+map("n", "]d", vim.diagnostic.goto_next, opts)
+map("n", "<leader>q", vim.diagnostic.setloclist, opts)
 
 -- Comment
 map("n", "mm", "gcc", { desc = "Toggle comment", remap = true })

@@ -1,5 +1,3 @@
-local fzf = require("fzf-lua")
-
 local options = {
 	keymap = {
 		builtin = {
@@ -22,4 +20,4 @@ local options = {
 	previewers = {},
 }
 
-fzf.setup(options)
+return options
