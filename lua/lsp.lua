@@ -6,7 +6,7 @@ local servers = {
 	"jsonls",
 	"rust_analyzer",
 	"lua_ls",
-	"pyright",
+	"basedpyright",
 	"sqls",
 }
 

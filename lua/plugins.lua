@@ -118,6 +118,12 @@ local plugins = {
 			require("configs.dbee")
 		end,
 	},
+	{
+		"milanglacier/minuet-ai.nvim",
+		config = function()
+			require("configs.minuet")
+		end,
+	},
 }
 
 require("lazy").setup({
