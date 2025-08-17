@@ -2,8 +2,8 @@ local lint = require("lint")
 local autocmd = vim.api.nvim_create_autocmd
 
 lint.linters_by_ft = {
-	cpp = { "cpplint" },
-	c = { "cpplint" },
+	-- cpp = { "cpplint" },
+	-- c = { "cpplint" },
 	lua = { "luacheck" },
 	rust = { "clippy" },
 	json = { "jsonlint" },
