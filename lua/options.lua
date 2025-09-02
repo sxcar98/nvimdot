@@ -19,6 +19,7 @@ local options = {
 
 	mouse = "", -- mouse disabled
 	number = true, -- set numbered lines
+	relativenumber = true,
 	scrolloff = 18, -- minimal number of screen lines to keep above and below the cursor
 	sidescrolloff = 3, -- minimal number of screen columns to keep to the left and right (horizontal) of the cursor if wrap is `false`
 	signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
@@ -81,14 +82,14 @@ end
 -- By default, use rose-pine
 vim.cmd.colorscheme("tokyonight")
 
-vim.g.clipboard = {
-	name = "OSC 52",
-	copy = {
-		["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-		["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-	},
-	paste = {
-		["+"] = function() end,
-		["*"] = function() end,
-	},
-}
+-- vim.g.clipboard = {
+-- 	name = "OSC 52",
+-- 	copy = {
+-- 		["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+-- 		["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+-- 	},
+-- 	paste = {
+-- 		["+"] = function() end,
+-- 		["*"] = function() end,
+-- 	},
+-- }

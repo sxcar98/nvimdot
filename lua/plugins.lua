@@ -120,9 +120,19 @@ local plugins = {
 	},
 	{
 		"milanglacier/minuet-ai.nvim",
+		enabled = false,
 		config = function()
 			require("configs.minuet")
 		end,
+	},
+	{
+		"mfussenegger/nvim-dap",
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+	},
+	{
+		"nvim-neotest/nvim-nio",
 	},
 }
 

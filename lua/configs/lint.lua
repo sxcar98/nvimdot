@@ -3,7 +3,7 @@ local autocmd = vim.api.nvim_create_autocmd
 
 lint.linters_by_ft = {
 	-- cpp = { "cpplint" },
-	-- c = { "cpplint" },
+	c = { "cpplint" },
 	lua = { "luacheck" },
 	rust = { "clippy" },
 	json = { "jsonlint" },
