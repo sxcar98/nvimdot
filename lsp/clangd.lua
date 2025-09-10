@@ -1,5 +1,8 @@
 local options = {
-	cmd = { "clangd" },
+	cmd = {
+		"clangd",
+		"--background-index",
+	},
 	filetypes = {
 		"c",
 		"cpp",
@@ -16,7 +19,7 @@ local options = {
 		".clang-format",
 		"compile_commands.json",
 		"compile_flags.txt",
-		"configure.ac", -- AutoTools
+		"configure.ac",
 		".git",
 	},
 	capabilities = {
