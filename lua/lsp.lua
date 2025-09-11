@@ -1,6 +1,3 @@
-local enable = vim.lsp.enable
-local config = vim.lsp.config
-
 local servers = {
 	"clangd",
 	"jsonls",
@@ -14,7 +11,6 @@ local on_attach = function(client, bufnr)
 	client.server_capabilities.documentFormattingProvider = false
 	client.server_capabilities.documentRangeFormattingProvider = false
 	local opts = { noremap = true, silent = true, buffer = bufnr }
-	local keymap = vim.keymap.set
 	vim.o.updatetime = 300
 	vim.api.nvim_create_autocmd("CursorHold", {
 		buffer = bufnr,
@@ -22,16 +18,16 @@ local on_attach = function(client, bufnr)
 			vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
 		end,
 	})
-	keymap("n", "gd", vim.lsp.buf.definition, opts)
-	keymap("n", "K", vim.lsp.buf.hover, opts)
-	keymap("n", "gi", vim.lsp.buf.implementation, opts)
-	keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
-	keymap("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-	keymap("n", "gr", vim.lsp.buf.references, opts)
-	keymap("n", "[d", vim.diagnostic.goto_prev, opts)
-	keymap("n", "]d", vim.diagnostic.goto_next, opts)
-	keymap("n", "<leader>q", vim.diagnostic.setloclist, opts)
-	keymap("n", "<leader>f", function()
+	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+	vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+	vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+	vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+	vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
+	vim.keymap.set("n", "<leader>f", function()
 		vim.lsp.buf.format({ async = true })
 	end, opts)
 end
@@ -41,6 +37,6 @@ local options = {
 }
 
 for _, lsp in ipairs(servers) do
-	config(lsp, options)
-	enable(lsp)
+	vim.lsp.config(lsp, options)
+	vim.lsp.enable(lsp)
 end
