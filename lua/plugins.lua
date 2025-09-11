@@ -135,9 +135,9 @@ local plugins = {
 		end,
 	},
 	{
-		"rcarriga/nvim-dap-ui",
+		"igorlfs/nvim-dap-view",
 		config = function()
-			require("configs.dapui")
+			require("configs.dap-view")
 		end,
 	},
 }

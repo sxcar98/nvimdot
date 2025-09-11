@@ -1,4 +1,8 @@
 local dap = require("dap")
+local widgets = require("dap.ui.widgets")
+
+-- terminate dap buf when close ui
+dap.defaults.fallback.switchbuf = "usevisible,usetab,newtab"
 
 dap.adapters.lldb = {
 	type = "executable",
@@ -45,35 +49,23 @@ end, opts)
 vim.keymap.set("n", "<S-F5>", function()
 	require("dap").terminate()
 end, opts)
--- F9 Toggle Breakpoint
+-- F6 Toggle Breakpoint
 vim.keymap.set("n", "<F6>", function()
 	require("dap").toggle_breakpoint()
 end, opts)
--- F10 Step Over
+-- F7 Step Over
 vim.keymap.set("n", "<F7>", function()
 	require("dap").step_over()
 end, opts)
--- F11 Step Into
+-- F8 Step Into
 vim.keymap.set("n", "<F8>", function()
 	require("dap").step_into()
 end, opts)
--- Shift+F11 Step Out
+-- Shift+F8 Step Out
 vim.keymap.set("n", "<S-F8>", function()
 	require("dap").step_out()
 end, opts)
--- F6 Pause
+-- F9 Pause
 vim.keymap.set("n", "<F9>", function()
 	require("dap").pause()
-end, opts)
--- <leader>dr REPL
-vim.keymap.set("n", "<leader>dr>", function()
-	require("dap").repl.open()
-end, opts)
--- <leader>dl Run Last
-vim.keymap.set("n", "<leader>dl", function()
-	require("dap").run_last()
-end, opts)
--- <leader>du Toggle UI
-vim.keymap.set("n", "<leader>du", function()
-	require("dapui").toggle({})
 end, opts)
