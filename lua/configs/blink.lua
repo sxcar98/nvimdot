@@ -10,15 +10,7 @@ local options = {
 		},
 		trigger = { prefetch_on_insert = false },
 	},
-	sources = {
-		default = {
-			"lsp",
-			"path",
-			"snippets",
-			"buffer",
-			-- "minuet",
-		},
-		-- providers = {
+	providers = {
 		-- 	minuet = {
 		-- 		name = "minuet",
 		-- 		module = "minuet.blink",
@@ -28,7 +20,15 @@ local options = {
 		-- 		timeout_ms = 3000,
 		-- 		score_offset = 50, -- Gives minuet higher priority among suggestions
 		-- 	},
-		-- },
+	},
+	sources = {
+		default = {
+			"lsp",
+			"path",
+			"snippets",
+			"buffer",
+			-- "minuet",
+		},
 		per_filetype = {
 			cpp = {
 				"lsp",

@@ -9,7 +9,10 @@ local options = {
 			analysis = {
 				autoSearchPaths = true,
 				useLibraryCodeForTypes = true,
-				typeCheckingMode = "basic", -- 也可以 "strict"
+				typeCheckingMode = "basic",
+				diagnosticSeverityOverrides = {
+					reportUnusedExpression = "none",
+				},
 			},
 		},
 	},
