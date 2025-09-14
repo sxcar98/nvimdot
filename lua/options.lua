@@ -16,6 +16,7 @@ local options = {
 
 	-- ui
 	cursorline = true, -- highlight the current line
+	cursorcolumn = true,
 
 	mouse = "", -- mouse disabled
 	number = true, -- set numbered lines

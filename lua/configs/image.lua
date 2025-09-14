@@ -1,11 +1,11 @@
 local image = require("image")
 
 image.setup({
-	backend = "ueberzug",
-	max_width = 100,
-	max_height = 12,
-	max_height_window_percentage = math.huge,
-	max_width_window_percentage = math.huge,
+	backend = "sixel",
+	integrations = {
+		markdown = {
+			only_render_image_at_cursor = true,
+		},
+	},
 	window_overlap_clear_enabled = true,
-	window_overlap_clear_ft_ignore = { "cmp_menu", "cmp_docs", "" },
 })

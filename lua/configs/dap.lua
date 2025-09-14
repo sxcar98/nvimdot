@@ -27,7 +27,7 @@ dap.configurations.c = dap.configurations.cpp
 
 dap.adapters.python = {
 	type = "executable",
-	command = "/opt/homebrew/anaconda3/envs/itcast/bin/python3",
+	command = "/opt/homebrew/bin/python3",
 	args = { "-m", "debugpy.adapter" },
 }
 dap.configurations.python = {
@@ -36,36 +36,36 @@ dap.configurations.python = {
 		type = "python",
 		request = "launch",
 		program = "${file}",
-		pythonPath = "/opt/homebrew/anaconda3/envs/itcast/bin/python3",
+		pythonPath = "/opt/homebrew/bin/python3",
 	},
 }
 
 local opts = { silent = true, noremap = true }
 -- F5 Continue
 vim.keymap.set("n", "<F5>", function()
-	require("dap").continue()
+	dap.continue()
 end, opts)
 -- Shift+F5 Stop
 vim.keymap.set("n", "<S-F5>", function()
-	require("dap").terminate()
+	dap.terminate()
 end, opts)
 -- F6 Toggle Breakpoint
 vim.keymap.set("n", "<F6>", function()
-	require("dap").toggle_breakpoint()
+	dap.toggle_breakpoint()
 end, opts)
 -- F7 Step Over
 vim.keymap.set("n", "<F7>", function()
-	require("dap").step_over()
+	dap.step_over()
 end, opts)
 -- F8 Step Into
 vim.keymap.set("n", "<F8>", function()
-	require("dap").step_into()
+	dap.step_into()
 end, opts)
 -- Shift+F8 Step Out
 vim.keymap.set("n", "<S-F8>", function()
-	require("dap").step_out()
+	dap.step_out()
 end, opts)
 -- F9 Pause
 vim.keymap.set("n", "<F9>", function()
-	require("dap").pause()
+	dap.pause()
 end, opts)
