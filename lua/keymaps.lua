@@ -29,8 +29,4 @@ map("n", "mm", "gcc", { desc = "Toggle comment", remap = true })
 map("v", "mm", "gc", { desc = "Toggle comment", remap = true })
 
 -- molten
-map("n", "<leader>rr", ":MoltenRunCell<CR>", { desc = "Run current cell" })
 map("n", "<leader>bb", ":MoltenEvaluateLine<CR>", { desc = "Run current line" })
-map("n", "<leader>ra", ":MoltenRunAll<CR>", { desc = "Run all cells" })
-map("n", "<leader>rk", ":MoltenInterrupt<CR>", { desc = "Interrupt kernel" })
-map("n", "<leader>rq", ":MoltenShutdown<CR>", { desc = "Shutdown kernel" })

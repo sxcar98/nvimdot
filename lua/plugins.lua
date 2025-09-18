@@ -147,6 +147,14 @@ local plugins = {
 			require("configs.dap-view")
 		end,
 	},
+	-- {
+	-- 	"goerz/jupytext.nvim",
+	-- 	config = function()
+	-- 		require("jupytext").setup({
+	-- 			force_ft = "markdown",
+	-- 		})
+	-- 	end,
+	-- },
 	{
 		"benlubas/molten-nvim",
 		build = ":UpdateRemotePlugins",
