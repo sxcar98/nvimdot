@@ -119,7 +119,7 @@ local plugins = {
 			"MunifTanjim/nui.nvim",
 		},
 		build = function()
-			require("dbee").install()
+			require("dbee").install("go")
 		end,
 		config = function()
 			require("configs.dbee")
@@ -147,14 +147,12 @@ local plugins = {
 			require("configs.dap-view")
 		end,
 	},
-	-- {
-	-- 	"goerz/jupytext.nvim",
-	-- 	config = function()
-	-- 		require("jupytext").setup({
-	-- 			force_ft = "markdown",
-	-- 		})
-	-- 	end,
-	-- },
+	{
+		"GCBallesteros/jupytext.nvim",
+		config = function()
+			require("configs.jupytext")
+		end,
+	},
 	{
 		"benlubas/molten-nvim",
 		build = ":UpdateRemotePlugins",

@@ -18,6 +18,7 @@ local options = {
 		json = prettier,
 		lua = { "stylua" },
 		python = { "isort", "black" },
+		ipynb = { "black" },
 		typescript = { "stylua" },
 		yaml = { "stylua" },
 		rust = { "rustfmt" },
