@@ -1,7 +1,7 @@
 local image = require("image")
 
 image.setup({
-	backend = "kitty",
+	backend = "sixel",
 	integrations = {
 		markdown = {
 			only_render_image_at_cursor = true,

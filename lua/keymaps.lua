@@ -29,4 +29,4 @@ map("n", "mm", "gcc", { desc = "Toggle comment", remap = true })
 map("v", "mm", "gc", { desc = "Toggle comment", remap = true })
 
 -- molten
-map("n", "<leader>bb", ":MoltenEvaluateLine<CR>", { desc = "Run current line" })
+map("n", "<leader>m", ":MoltenEvaluateLine<CR>", { silent = true, desc = "Evaluate line" })
