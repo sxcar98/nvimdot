@@ -65,6 +65,7 @@ local plugins = {
 		"saghen/blink.cmp",
 		dependencies = {
 			{ "rafamadriz/friendly-snippets" },
+			"Kaiser-Yang/blink-cmp-avante",
 		},
 		build = "cargo build --release",
 		config = function()
@@ -89,7 +90,7 @@ local plugins = {
 		"MeanderingProgrammer/render-markdown.nvim",
 		ft = {
 			"markdown",
-			"codecompanion",
+			"Avante",
 		},
 		config = function()
 			require("configs.render-markdown")
@@ -169,6 +170,21 @@ local plugins = {
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
+	},
+	{
+		"yetone/avante.nvim",
+		build = "make BUILD_FROM_SOURCE=true",
+		event = "VeryLazy",
+		config = function()
+			require("configs.avante")
+		end,
+	},
+	{
+		"HakonHarnes/img-clip.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("configs.img-clip")
+		end,
 	},
 }
 

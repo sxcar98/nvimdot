@@ -16,7 +16,14 @@ local options = {
 			"path",
 			"snippets",
 			"buffer",
+			"avante",
 			-- "minuet",
+		},
+		providers = {
+			avante = {
+				module = "blink-cmp-avante",
+				name = "Avante",
+			},
 		},
 		per_filetype = {
 			cpp = {
